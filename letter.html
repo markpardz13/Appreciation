@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Letter for my beautiful girlfriend</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --pink-1: #ffd6e7;
+      --pink-2: #ff8fb1;
+      --pink-3: #ff4f8b;
+      --pink-4: #7a2443;
+      --white: #fff8fc;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Great Vibes", cursive;
+      background: linear-gradient(135deg, var(--pink-1), #ffeef6);
+      color: var(--pink-4);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .card {
+      width: min(420px, 100%);
+      background: rgba(255, 255, 255, 0.9);
+      border-radius: 24px;
+      box-shadow: 0 15px 35px rgba(122, 36, 67, 0.2);
+      overflow: hidden;
+      border: 2px solid #ffc7db;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+
+    .content {
+      padding: 24px;
+    }
+
+    .title {
+      text-align: center;
+      margin: 0 0 16px;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--pink-3);
+    }
+
+    .letter-text {
+      line-height: 1.8;
+      font-size: 1rem;
+      color: var(--pink-4);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .letter-text p {
+      margin: 12px 0;
+    }
+
+    .items-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 30px 0;
+    }
+
+    .item {
+      text-align: center;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+
+    .item:hover {
+      transform: scale(1.05);
+    }
+
+    .item-icon {
+      font-size: 4rem;
+      margin-bottom: 10px;
+    }
+
+    .item-label {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--pink-3);
+    }
+
+    .back-button {
+      display: block;
+      margin: 18px auto 0;
+      padding: 14px 30px;
+      background: linear-gradient(145deg, #ff8fb1, #ff4f8b);
+      color: #fff;
+      border: none;
+      border-radius: 14px;
+      font-family: "Great Vibes", cursive;
+      font-size: 1.6rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      transition: transform 0.12s ease, box-shadow 0.12s ease;
+      box-shadow: 0 8px 18px rgba(122, 36, 67, 0.18);
+      padding-inline: 34px;
+    }
+
+    .back-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(122, 36, 67, 0.22);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="content">
+      <h1 class="title">Appreciation Letter for you my love!</h1>
+      
+      <div class="letter-text">
+        <p>Letter kay gwapa man kaayu ka hehe</p>
+      </div>
+
+      <div class="items-container">
+        <div class="item" onclick="window.location.href='flowers.html'">
+          <div class="item-icon">🌸</div>
+          <div class="item-label">Our memories</div>
+        </div>
+        <div class="item" onclick="window.location.href='mylove.html'">
+          <div class="item-icon">💌</div>
+          <div class="item-label">My love letter</div>
+        </div>
+        <div class="item" onclick="window.location.href='song.html'">
+          <div class="item-icon">🧸</div>
+          <div class="item-label">A song for you</div>
+        </div>
+      </div>
+
+      <button class="back-button" onclick="window.location.href='Index.html'">Go Back</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Our Memories</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#ffd7e4;
+    --maroon:#7a1f2b;
+    --maroon-dark:#5c1620;
+    --rose-1:#e8a0a8;
+    --rose-2:#c85a68;
+    --leaf:#5d7a44;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:var(--cream);
+    font-family:"Cormorant Garamond", serif;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:30px;
+    position:relative;
+    overflow:hidden;
+  }
+  .frame{
+    position:relative;
+    width:min(1100px, 100%);
+    background:var(--cream);
+    padding:40px 20px 60px;
+    overflow:hidden;
+  }
+  .corner{
+    position:absolute;
+    width:280px;
+    height:280px;
+    pointer-events:none;
+    opacity:0.95;
+    z-index:0;
+  }
+  .corner.tl{ top:-40px; left:-50px; }
+  .corner.br{ bottom:-40px; right:-50px; transform:rotate(180deg); }
+
+  .title{
+    position:relative;
+    z-index:2;
+    text-align:center;
+    font-family:"Great Vibes", cursive;
+    color:var(--maroon);
+    font-size:4.2rem;
+    margin:10px 0 34px;
+    text-shadow:0 1px 0 rgba(255,255,255,0.6);
+  }
+
+  .heart-grid{
+    position:relative;
+    z-index:2;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:10px;
+  }
+  .row{
+    display:flex;
+    gap:10px;
+    justify-content:center;
+  }
+  .tile{
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 10px 22px rgba(90,30,40,0.18), 0 2px 6px rgba(90,30,40,0.12);
+    background:#ddd;
+  }
+  .tile img{
+    display:block;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+  }
+
+  .row1 .tile{ width:230px; height:120px; }
+  .row2 .tile{ width:230px; height:150px; }
+  .row3 .tile{ width:230px; height:140px; }
+  .row4 .tile{ width:230px; height:140px; }
+  .row5 .tile{ width:230px; height:150px; }
+
+  .quote{
+    position:relative;
+    z-index:2;
+    max-width:480px;
+    margin:0 auto 34px;      
+    text-align:center;
+    font-style:italic;
+    color:var(--maroon-dark);
+    font-size:1.35rem;
+    line-height:1.7;
+  }
+
+  .back-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 16px 34px;
+      background: linear-gradient(145deg, #ff8fb1, #ff4f8b);
+      color: #fff;
+      border: none;
+      border-radius: 14px;
+      font-family: "Great Vibes", cursive;
+      font-size: 1.6rem;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: transform 0.12s ease, box-shadow 0.12s ease;
+      box-shadow: 0 8px 18px rgba(122, 36, 67, 0.18);
+  }
+  .nav-back:hover{
+    transform:translateY(-3px);
+    box-shadow:0 10px 22px rgba(90,30,40,0.2);
+  }
+
+  @media (max-width: 780px){
+    .row1 .tile, .row2 .tile, .row3 .tile, .row4 .tile, .row5 .tile{
+      width: 27vw; height: 18vw;
+    }
+    .title{ font-size:3rem; }
+    .quote{ margin:34px auto 0; }
+    .corner{ width:160px; height:160px; }
+  }
+</style>
+</head>
+<body>
+  <div class="frame">
+
+    <!-- top-left floral flourish (original artwork) -->
+    <svg class="corner tl" viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10,270 C40,200 30,120 90,80 C130,54 170,60 190,30" fill="none" stroke="var(--leaf)" stroke-width="4" opacity="0.8"/>
+      <path d="M20,250 C60,210 70,160 60,120" fill="none" stroke="var(--leaf)" stroke-width="3" opacity="0.6"/>
+      <ellipse cx="40" cy="200" rx="22" ry="13" fill="var(--leaf)" opacity="0.55" transform="rotate(-30 40 200)"/>
+      <ellipse cx="70" cy="150" rx="20" ry="12" fill="var(--leaf)" opacity="0.55" transform="rotate(20 70 150)"/>
+      <ellipse cx="120" cy="95" rx="18" ry="11" fill="var(--leaf)" opacity="0.5" transform="rotate(-10 120 95)"/>
+      <g transform="translate(55,60)">
+        <circle r="30" fill="var(--rose-1)"/>
+        <circle r="21" fill="var(--rose-2)"/>
+        <circle r="11" fill="var(--maroon)"/>
+      </g>
+      <g transform="translate(125,45) scale(0.7)">
+        <circle r="30" fill="var(--rose-1)"/>
+        <circle r="21" fill="var(--rose-2)"/>
+        <circle r="11" fill="var(--maroon)"/>
+      </g>
+      <g transform="translate(35,150) scale(0.55)">
+        <circle r="30" fill="var(--rose-1)"/>
+        <circle r="21" fill="var(--rose-2)"/>
+        <circle r="11" fill="var(--maroon)"/>
+      </g>
+    </svg>
+
+    <!-- bottom-right floral flourish (mirrors top-left, original artwork) -->
+    <svg class="corner br" viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10,270 C40,200 30,120 90,80 C130,54 170,60 190,30" fill="none" stroke="var(--leaf)" stroke-width="4" opacity="0.8"/>
+      <path d="M20,250 C60,210 70,160 60,120" fill="none" stroke="var(--leaf)" stroke-width="3" opacity="0.6"/>
+      <ellipse cx="40" cy="200" rx="22" ry="13" fill="var(--leaf)" opacity="0.55" transform="rotate(-30 40 200)"/>
+      <ellipse cx="70" cy="150" rx="20" ry="12" fill="var(--leaf)" opacity="0.55" transform="rotate(20 70 150)"/>
+      <ellipse cx="120" cy="95" rx="18" ry="11" fill="var(--leaf)" opacity="0.5" transform="rotate(-10 120 95)"/>
+      <g transform="translate(55,60)">
+        <circle r="30" fill="var(--rose-1)"/>
+        <circle r="21" fill="var(--rose-2)"/>
+        <circle r="11" fill="var(--maroon)"/>
+      </g>
+      <g transform="translate(125,45) scale(0.7)">
+        <circle r="30" fill="var(--rose-1)"/>
+        <circle r="21" fill="var(--rose-2)"/>
+        <circle r="11" fill="var(--maroon)"/>
+      </g>
+      <g transform="translate(35,150) scale(0.55)">
+        <circle r="30" fill="var(--rose-1)"/>
+        <circle r="21" fill="var(--rose-2)"/>
+        <circle r="11" fill="var(--maroon)"/>
+      </g>
+    </svg>
+
+    <h1 class="title">Our Memories</h1>
+
+    <div class="heart-grid">
+      <div class="row row1">
+        <div class="tile"><img src="baywalk1.jpg" alt=""></div>
+        <div class="tile"><img src="Bus 1.jpg" alt=""></div>
+      </div>
+      <div class="row row2">
+        <div class="tile"><img src="Metro.jpg" alt=""></div>
+        <div class="tile"><img src="harison.jpg" alt=""></div>
+        <div class="tile"><img src="download3.jpg" alt=""></div>
+      </div>
+      <div class="row row3">
+        <div class="tile"><img src="Muffy.jpg" alt=""></div>
+        <div class="tile"><img src="harisson2.jpg" alt=""></div>
+        <div class="tile"><img src="Park.jpg" alt=""></div>
+      </div>
+      <div class="row row4">
+        <div class="tile"><img src="download.jpg" alt=""></div>
+        <div class="tile"><img src="download2.jpg" alt=""></div>
+      </div>
+      <div class="row row5">
+        <div class="tile"><img src="island.jpg" alt=""></div>
+      </div>
+    </div>
+
+    <p class="quote">Every memory we've made is something I hold close to my heart. No matter how much time passes, I'll always look back on them if i miss it.</p>
+
+    <button class="back-button" onclick="window.location.href='letter.html'">Back</button>
+  </div>
+</body>
+</html>
